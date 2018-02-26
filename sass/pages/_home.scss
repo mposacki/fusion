@@ -1,0 +1,9 @@
+.section-start{
+    height: 100vh;
+    width: 100%;
+    background-image: radial-gradient(
+        rgba($color-black-1,0.8),
+        rgba($color-black-2, 0.8)),
+        url(../img/bg-main.jpg); 
+    background-size: cover;
+}

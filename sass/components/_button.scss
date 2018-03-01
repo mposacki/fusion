@@ -87,13 +87,11 @@
 
 .btn-arrow{
     color: $color-primary;
-    font-size: 1.5rem;
+    font-size: 2rem;
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
-
-    //transform: rotate(90deg);
 
     &:hover{
         transform: translate(-50%, -50%) rotate(90deg);

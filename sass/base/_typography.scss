@@ -1,6 +1,39 @@
 body{
     font-family: "Merriweather", serif;
-    /* font-size: 1.6rem; */
     line-height: 1.7;
     color: $color-white;
+}
+
+.heading-section{
+    position: relative;
+    text-align: center;
+
+    &__title{
+        &--primary{
+            @include openSansSemiBold;
+            display: block;
+            margin: 0 auto;
+            text-transform: uppercase;
+            color: $color-primary-light;
+
+            &:before{
+                display: block;
+                content: "";
+                height: 12.3rem;
+                background-color: $color-primary-light;
+                width: 2px;
+                margin: 0 auto 2.7rem;
+                
+            }
+        }
+
+        &--secondary{
+            font-family: $default-font;
+            font-weight: 300;
+            font-size: 4rem;
+            display: block;
+            padding: 4rem 15%; 
+            margin: 0 auto;
+        }
+    }
 }

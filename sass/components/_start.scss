@@ -1,35 +1,18 @@
 .start{
-
-    //transition: all 1.5s;
-
-    &__heading{
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        width: 40%;
-    }
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 40%;
 
     &__text{
-        font-size: 3.5rem;
-        font-weight: 100;
-        padding: 2rem 3rem;
+        font-family: $default-font;
+        font-weight: 300;
+        font-size: 5.5rem;
+        padding: 5.5rem;
         position: relative;
-
-       /* &::before,
-        &::after {
-            box-sizing: inherit;
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }*/
-        border: .5px solid $color-white;
-        
-        //animation-name: borderAnimation;
-        //animation-duration: 2s;
-        //animation-timing-function: linear;
+        border: 1px solid $color-white;
 
         span{
             color: $color-primary;
@@ -37,10 +20,12 @@
     }
 
     &__nav{
-        margin-top: 2.5rem;
+        margin-top: 3rem;
         text-transform: uppercase;
         text-decoration: none;
         list-style: none;
+        font-family: $font-primary;
+        font-size: 1.3rem;
         
         li{
             display: inline;
@@ -53,24 +38,3 @@
         }
     }
 }
-/*
-.animated{
-    transition: color .5s;
-
-    &::before,
-    &::after {
-        border: 1px solid transparent;
-        width: 0;
-        height: 0;
-    }
-
-    &::before {
-        top: 0;
-        left: 0;
-      }
-
-    &::after {
-    bottom: 0;
-    right: 0;
-    }
-}*/

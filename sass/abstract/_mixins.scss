@@ -13,6 +13,16 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin robotoMedium{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+@mixin openSansSemiBold{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
 //Media query manager
 
 /*

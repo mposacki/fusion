@@ -6,9 +6,15 @@
         
         <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans:400,600|Roboto:400,500" rel="stylesheet">
 
+        <script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+        
         <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+        <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+        
         
         <title>Fusion</title>
     </head>
@@ -58,44 +64,231 @@
         <a href="#" class="btn btn-arrow">></a>
     </section>
 
-    <section class="section-services">
+    <section class="section-services" id="section-services">
+    <div class="active-site">
         <div class="heading-section">
             <div class="row">
-                <h3 class="heading-section__title--primary">Our Services</h3>
-                <h1 class="heading-section__title--secondary">Our team will take your business presence to new level</h1>
+                <h3 class="title-primary">Our Services</h3>
+                <h1 class="title-secondary">Our team will take your business presence to new level</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row-small">
             <div class="col-1-of-3">
                 <div class="services-box">
                     <img src="img/strategy.png" alt="Strategy icon" class="services-box__icon">
                     <h2 class="services-box__title">Strategy.</h2>
-                    <p class="service-box__text">Ship it user story iterate engaging co-working intuitive pitch deck 
+                    <p class="services-box__text">Ship it user story iterate engaging co-working intuitive pitch deck 
                         hacker prototype SpaceTeam user centered design big data.</p>
-                    <a href="#" class="btn-text">See details <span>&rarr;</span></a>
+                    <a href="#service-item" class="btn-text">See details <span>&rarr;</span></a>
                 </div>
             </div>
             <div class="col-1-of-3">
                 <div class="services-box">
                     <img src="img/branding.png" alt="Strategy icon" class="services-box__icon">
                     <h2 class="services-box__title">Branding.</h2>
-                    <p class="service-box__text">Ship it user story iterate engaging co-working intuitive pitch deck 
+                    <p class="services-box__text">Ship it user story iterate engaging co-working intuitive pitch deck 
                         hacker prototype SpaceTeam user centered design big data.</p>
-                    <a href="#" class="btn-text">See details <span>&rarr;</span></a>
+                    <a href="#service-item" class="btn-text">See details <span>&rarr;</span></a>
                 </div>
             </div>
             <div class="col-1-of-3">
                 <div class="services-box">
                     <img src="img/design.png" alt="Strategy icon" class="services-box__icon">
                     <h2 class="services-box__title">Design.</h2>
-                    <p class="service-box__text">Ship it user story iterate engaging co-working intuitive pitch deck 
+                    <p class="services-box__text">Ship it user story iterate engaging co-working intuitive pitch deck 
                         hacker prototype SpaceTeam user centered design big data.</p>
-                    <a href="#" class="btn-text">See details <span>&rarr;</span></a>
+                    <a href="#service-item" class="btn-text">See details <span>&rarr;</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service-item" id="service-item" style="display:none;">
+        <div class="row">
+            <div class="col-1-of-2 left-side">
+                <img src="img/service-item.png" alt="Strategy photo" class="left-side__img">
+                <p class="left-side__img-title">Strategy.</p>
+                <a href="#section-services"><img src="img/arrow.png" alt="Arrow icon" class="left-side__arrow"></a>
+            </div>
+            <div class="col-1-of-2 right-side">
+                <h2 class="right-side__heading-title">Perfect strategy for your brand</h2>
+                <p class="paragraph">Chances are unless you are very lucky you will go thru many different relationships 
+                    before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play 
+                    dozens of hands until you get a winning hand, and it is the same with relationships.</p>
+                <p class="paragraph">During your life you will probably meet some people who seem like they may be the one, 
+                    or that they are closers, and I thought everything was great, until I started to seriously consider getting married.</p>
+                <div class="offer">
+                    <div class="offer-box">
+                        <img src="img/flag.png" alt="Flag icon" class="offer-box__icon">
+                        <p class="offer-box__text">Award-winning Strategist</p>
+                    </div>
+                    <div class="offer-box">
+                        <img src="img/listmagnifier.png" alt="List icon witch magnifier" class="offer-box__icon">
+                         <p class="offer-box__text">Extended Research</p>
+                    </div>
+                    <div class="offer-box">
+                        <img src="img/list.png" alt="List icon" class="offer-box__icon">
+                         <p class="offer-box__text">Bullet-proof Planning</p>
+                    </div>
+                    <div class="offer-box">
+                        <img src="img/okey.png" alt="Okey icon" class="offer-box__icon">
+                         <p class="offer-box__text">Trusted by Thousands</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-orange">Get in touch &rarr;</a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="section-portfolio">
+        <div class="project-active">
+            <div class="row">
+                <div class="portfolio">
+                    <div class="heading-section">
+                        <h3 class="title-primary--left">Branding & Design</h3>
+                        <h1 class="title-secondary--left">Project One</h1>
+                    </div>
+                    <div class="portfolio__img"></div>
+                    <!-- <img src="#" alt="Porfolio One image" class="portfolio__img"> -->
+                    <div class="about-project_section">
+                        <a href="#" class="btn-text">Project details <span>&rarr;</span></a>
+                        <a href="#" class="btn-text--after">View slides <span>&rarr;</span></a>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <div class="project-slides" >
+            <div class="owl-carousel" id="project-slider">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+            </div>
+            <a href="#" class="btn-text"><span>&larr;</span> Back to portfolio</a>
+        </div>
+
+        <div class="project-details" >
+            <div class="row">
+                <div class="details">
+                    <div class="details-panel">
+                        <h1 class="details__title">Project One</h1>
+                        <h3 class="details__subtitle">Branding & Design <span>|</span> March 2016</h3>
+                        <p class="paragraph">Having a baby can be a nerve wracking experience for new parents – not the nine months of pregnancy, 
+                            I’m talking about after the infant is brought home from the hospital. It’s always the same thing, by the time they have 
+                            their third child they have it all figured out, but with number one it’s a learning thing.</p>
+                        <p class="paragraph">Baby monitors help you hear your baby’s needs without you having to be in the room with the baby. 
+                            Some baby monitors are portable, or “mobile” and are small enough that you can carry it in your pocket as you do your daily chores around the house. 
+                            Depending on your price range it’s best to have a base unit that plugs into the wall. The receiving unit can be like your portable phone, 
+                            you can carry it around with you, and plug it back into the base unit to be recharged.</p>
+                        <a href="#" class="btn-text">See the project <span>&rarr;</span></a>
+                    </div>
+                </div>
+                <a href="#" class="btn-text"><span>&larr;</span> Back to portfolio</a>
+            </div>
+        </div>
     </section>
 
+    <section class="section-testimonials">
+        <div class="row">
+            <div class="heading-section">
+                <h3 class="title-primary">Testimonials</h3>
+                <h1 class="title-secondary">We have worked with some amazing companies around the world</h1>  
+            </div>
+
+            <div class="logos">
+                <img src="img/autodesk.png" alt="Autodesk logo" class="logos__item">
+                <img src="img/mastercard.png" alt="Mastercard logo" class="logos__item">
+                <img src="img/intuit.png" alt="Intuit logo" class="logos__item">
+                <img src="img/mtv.png" alt="MTV logo" class="logos__item">
+                <img src="img/printerest.png" alt="Pinterest lgoo" class="logos__item">
+                <img src="img/salesforce.png" alt="Salesforce logo" class="logos__item">
+                <img src="img/visa.png" alt="Visa logo" class="logos__item">
+            </div>
+
+            <div class="feedback">
+                <div class="owl-carousel" id="feedback-slider">
+                    <div class="item single-feedback">
+                        <div class="single-feedback__img"></div>
+                        <p class="single-feedback__opinion">“These cartridges can be replaced by the printer ink of similar brand. Compatible Inkjet Cartridge will 
+                            help you to make extra-ordinary savings with money back guarantee. As soon as the cartridge gets empty the ink that it contains begins 
+                            to dry”</p>
+                        <div class="single-feedback__signature">
+                            <h1 class="signature-first">Anthony Watkins</h1>
+                            <h3 class="signature-second">VP of Product, VISA</h3>
+                        </div>
+                    </div>
+                    <div class="item single-feedback">
+                        <div class="single-feedback__img"></div>
+                        <p class="single-feedback__opinion">“These cartridges can be replaced by the printer ink of similar brand. Compatible Inkjet Cartridge will 
+                            help you to make extra-ordinary savings with money back guarantee. As soon as the cartridge gets empty the ink that it contains begins 
+                            to dry”</p>
+                        <div class="single-feedback__signature">
+                            <h1 class="signature-first">Anthony Watkins</h1>
+                            <h3 class="signature-second">VP of Product, VISA</h3>
+                        </div>
+                    </div>
+                    <div class="item single-feedback">
+                        <div class="single-feedback__img"></div>
+                        <p class="single-feedback__opinion">“These cartridges can be replaced by the printer ink of similar brand. Compatible Inkjet Cartridge will 
+                            help you to make extra-ordinary savings with money back guarantee. As soon as the cartridge gets empty the ink that it contains begins 
+                            to dry”</p>
+                        <div class="single-feedback__signature">
+                            <h1 class="signature-first">Anthony Watkins</h1>
+                            <h3 class="signature-second">VP of Product, VISA</h3>
+                        </div>
+                    </div>
+                    <div class="item single-feedback">
+                        <div class="single-feedback__img"></div>
+                        <p class="single-feedback__opinion">“These cartridges can be replaced by the printer ink of similar brand. Compatible Inkjet Cartridge will 
+                            help you to make extra-ordinary savings with money back guarantee. As soon as the cartridge gets empty the ink that it contains begins 
+                            to dry”</p>
+                        <div class="single-feedback__signature">
+                            <h1 class="signature-first">Anthony Watkins</h1>
+                            <h3 class="signature-second">VP of Product, VISA</h3>
+                        </div>
+                    </div>
+                    <div class="item single-feedback">
+                        <div class="single-feedback__img"></div>
+                        <p class="single-feedback__opinion">“These cartridges can be replaced by the printer ink of similar brand. Compatible Inkjet Cartridge will 
+                            help you to make extra-ordinary savings with money back guarantee. As soon as the cartridge gets empty the ink that it contains begins 
+                            to dry”</p>
+                        <div class="single-feedback__signature">
+                            <h1 class="signature-first">Anthony Watkins</h1>
+                            <h3 class="signature-second">VP of Product, VISA</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#project-slider").owlCarousel({
+                singleItem:true,
+                items:1,
+                loop:true,
+                dots:true,
+                nav:true,
+                margin:0,
+                stagePadding:0
+        });
+
+            $("#feedback-slider").owlCarousel({
+                singleItem:true,
+                items:1,
+                loop:true,
+                dots:true,
+                nav:true,
+                margin:0,
+                stagePadding:0,
+                autoplay:true,
+                autoplayTimeout:3000,
+                autoplayHoverPause:true
+            });
+        });
+    </script>
 	</body>
 </html>

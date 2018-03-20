@@ -1,0 +1,73 @@
+.logos{
+    width: 100%;
+    margin-bottom: 10rem;
+    &__item{
+        -webkit-filter: grayscale(100%); 
+        filter: grayscale(100%);
+
+        &:not(:last-child){
+            margin-right: 7.5rem;
+        }
+
+        &:last-child{
+            -webkit-filter: contrast(0%);
+            filter: contrast(0%);
+        }
+    }
+}
+
+.feedback{
+    width: 75rem;
+    height: 38rem;
+    margin: 0 auto;
+
+    .single-feedback{
+        background-color: $color-black-2;
+
+        &__img{
+            width: 7.5rem;
+            height: 7.5rem;
+            display: block;
+            background-color: $image-background-color;
+            margin: 0 auto 5rem;
+        }
+
+        &__opinion{
+            margin-bottom: 5rem;
+            padding: 0 6rem;
+            font-family: $default-font;
+            font-size: 1.7rem;
+            text-align: center;
+        }
+
+        &__signature{
+            text-align: center;
+            // border-top: 1px solid $line-color;
+
+            &::before{
+                display: block;
+                content: "";
+                margin: 0 10rem;
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+}
+
+.signature{
+
+    &-first{
+        @include openSansSemiBold;
+        font-size: 1.4rem;
+        color: $color-primary-light;
+        text-transform: uppercase;
+        background-color: $color-black-2;
+        display: inline;
+        padding: 1rem 5rem;
+    }
+
+    &-second{
+        font-family: $font-primary;
+        font-size: 1.3rem;
+    }
+}

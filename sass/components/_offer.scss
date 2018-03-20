@@ -1,0 +1,23 @@
+.offer{
+
+    margin: 1.5rem 0 9rem;
+
+    .offer-box{
+        display: inline-block;
+        width: 49%;
+        margin-top: 3.5rem;
+
+        &__icon{
+            display: inline-block;
+            height: 1.6rem;
+            margin-right: 1rem;
+        }
+
+        &__text{
+            display: inline-block;
+            font-size: 1.5rem;
+            @include openSansSemiBold;
+            vertical-align: bottom;
+        }
+    }
+}

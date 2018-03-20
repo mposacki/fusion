@@ -1,0 +1,74 @@
+.services-box{
+    padding-bottom: 14rem;
+
+    &__icon{
+        height: 100%;
+        width: auto;
+        display: block;
+        padding-bottom: 3.5rem;
+    }
+
+    &__title{
+        padding-bottom: 2rem;
+        font-family: $default-font;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__text{
+        width: 75%;
+        padding-bottom: 3rem;
+    }
+
+    paragraph{
+        width: 70%;
+        padding-bottom: 3.5rem;
+    }
+}
+
+.service-item{
+
+    .left-side{
+        position: relative;
+    
+        &__img-title{
+            position: absolute;
+            top: 15rem;
+            right: -1.4rem;
+            color: $color-black;
+            background-color: $color-white;
+            padding: 1rem 3.5rem;
+            font-size: 3rem;
+        }
+        
+        &__arrow{
+            z-index: 200;
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+        }
+    }
+
+    .right-side{
+        position: relative;
+
+        &__heading-title{
+            @include openSansSemiBold;
+            font-size: 1.7rem;
+            text-transform: uppercase;
+
+            &:before{
+                display: block;
+                content: "";
+                height: 12.6rem;
+                background-color: $color-primary-light;
+                width: 3px;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .paragraph{
+            margin-top: 3.5rem;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.contact-data{
+    width: 75rem;
+    margin: 0 auto;
+
+    &__logo{
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .title-data{
+        @include openSansSemiBold;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .office-california{
+        display: inline-block;
+        margin: 0 5rem;
+    }
+
+    .office-ny{
+        display: inline-block;
+        margin: 0 3rem;
+    }
+
+    .other-contact{
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 4rem;
+    }
+
+    .contact-icons{
+        margin-top: 2rem;
+
+        &__item{
+
+            &:not(:last-child){
+                margin-right: .75rem;
+            }
+        }
+    }
+}

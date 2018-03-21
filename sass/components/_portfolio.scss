@@ -36,10 +36,28 @@
     height: 90rem;
     margin: 0 auto;
     padding: 15rem 0;
+    text-align: center;
 
     .details{
         background-image: linear-gradient( 90deg, $color-black-1 0%, $color-black-1 52%, $image-background-color 52%, $image-background-color 100%);
         margin-bottom: 3.5rem;
+        text-align: left;
+
+        &::before{
+            display: block;
+            content: '';
+            border: 1px solid $color-primary;
+            width: 13rem;
+        }
+
+        &::after{
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            border-left: 2px solid $color-primary;
+            height: 13rem;
+        }
 
         &-panel{
             width: 52%;
@@ -70,9 +88,5 @@
         .paragraph{
             margin-bottom: 3rem; 
         }
-    }
-
-    .btn-text{
-        text-align: center;
     }
 }

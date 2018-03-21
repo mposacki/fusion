@@ -1,0 +1,113 @@
+.team-players{
+    width: 100%;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 2px solid $color-black-2;
+        z-index: 1;
+    }
+
+    .single-player{
+        width: 25%;
+        display: inline-block;
+        min-height: 32rem;
+        vertical-align: bottom;
+        border: 1px solid $color-black-1;
+
+        &__image{
+            display: block;
+            margin: 5rem auto 2.5rem;
+            width: 12rem;
+            height: 12rem;
+            background-color: $color-grey;
+            border-radius: 100px;
+        }
+
+        .signature{
+            &-first{
+                display: block;
+                text-align: center;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            &-second{
+                display: block;
+                text-align: center;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .paragraph{
+            display: none;
+        }
+    }
+
+    .player-active{
+        position: relative;
+
+        &::before{
+            display: block;
+            content: '';
+            border: 1px solid $color-primary;
+            width: 6rem;
+        }
+
+        &::after{
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            border-left: 2px solid $color-primary;
+            height: 6rem;
+        }
+
+        .single-player{
+            &__image{
+                display: inline-block;
+                vertical-align: top;
+                margin: 1rem 0 1.5rem 1rem;
+                width: 4rem;
+                height: 4rem;
+                background-color: $color-grey;
+                border-radius: 60px;
+            }
+
+            &__text{
+                position: absolute;
+                top: 6.5rem;
+                left: 0;
+                writing-mode: vertical-rl;
+                margin: .25rem;
+            }
+        }
+
+        
+        .signature{
+            &-first{
+                text-align: left;
+                line-height: 2.5rem;
+            }
+
+            &-second{
+                text-align: left;
+                line-height: 2.5rem;
+            }
+        }
+
+        .paragraph{
+            display: inline-block;
+            width: 71%;
+            margin: .75rem .75rem .75rem 2rem;
+            line-height: 2.5rem;
+        }
+    }
+}

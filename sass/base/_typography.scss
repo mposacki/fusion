@@ -64,3 +64,21 @@ body{
     font-size: 1.4rem;
     color: $font-color-grey;
 }
+
+.signature{
+
+    &-first{
+        @include openSansSemiBold;
+        font-size: 1.4rem;
+        color: $color-primary-light;
+        text-transform: uppercase;
+        background-color: $color-black-2;
+        display: inline;
+        padding: 1rem 5rem;
+    }
+
+    &-second{
+        font-family: $font-primary;
+        font-size: 1.3rem;
+    }
+}

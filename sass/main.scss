@@ -2,25 +2,24 @@
 @import "abstract/mixins";
 @import "abstract/variables";
 
-@import "base/base";
 @import "base/animations";
+@import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
 @import "components/button";
-@import "components/start";
-@import "components/service";
+@import "components/contact";
+@import "components/feedback";
+@import "components/form";
 @import "components/offer";
 @import "components/owl";
 @import "components/portfolio";
-@import "components/feedback";
+@import "components/service";
+@import "components/start";
 @import "components/team";
-@import "components/form";
-@import "components/contact";
 
 @import "layout/grid";
 @import "layout/navigation";
-@import "layout/footer";
 @import "layout/header";
 
 @import "pages/home";

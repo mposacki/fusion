@@ -23,6 +23,12 @@
     font-weight: 600;
 }
 
+@mixin paragraph{
+    font-family: $font-primary;
+    font-size: 1.4rem;
+    color: $font-color-grey;
+}
+
 //Media query manager
 
 /*

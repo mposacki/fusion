@@ -7,27 +7,31 @@
         vertical-align: top;
     }
 
-    .title-data{
+    &__title{
         @include openSansSemiBold;
         text-transform: uppercase;
         font-size: 1.4rem;
         margin-bottom: 2rem;
     }
 
-    .office-california{
+    &__office{
         display: inline-block;
-        margin: 0 5rem;
+
+        &--ca{margin: 0 5rem;}
+        &--ny{margin: 0 3rem;}
+        &--other{
+            vertical-align: top;
+            margin-left: 4rem;
+        }
     }
 
-    .office-ny{
-        display: inline-block;
-        margin: 0 3rem;
+    &__paragraph{
+        @include paragraph;
     }
 
-    .other-contact{
-        display: inline-block;
-        vertical-align: top;
-        margin-left: 4rem;
+    &__mail{
+        text-decoration: none;
+        @include paragraph;
     }
 
     .contact-icons{

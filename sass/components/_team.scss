@@ -1,6 +1,4 @@
-.team-players{
-    width: 100%;
-    
+.team-members{
     &::after{
         content: '';
         position: absolute;
@@ -11,47 +9,51 @@
         border: 2px solid $color-black-2;
         z-index: 1;
     }
+}
 
-    .single-player{
-        width: 25%;
-        display: inline-block;
-        min-height: 32rem;
-        vertical-align: bottom;
-        border: 1px solid $color-black-1;
+.team-member{
+    width: 25%;
+    display: inline-block;
+    min-height: 32rem;
+    vertical-align: bottom;
+    border: 1px solid $color-black-1;
 
-        &__image{
-            display: block;
-            margin: 5rem auto 2.5rem;
-            width: 12rem;
-            height: 12rem;
-            background-color: $color-grey;
-            border-radius: 100px;
-        }
-
-        .signature{
-            &-first{
-                display: block;
-                text-align: center;
-                width: 100%;
-                padding: 0;
-                margin: 0;
-            }
-
-            &-second{
-                display: block;
-                text-align: center;
-                width: 100%;
-                padding: 0;
-                margin: 0;
-            }
-        }
-
-        .paragraph{
-            display: none;
-        }
+    &__image{
+        display: block;
+        margin: 5rem auto 2.5rem;
+        width: 12rem;
+        height: 12rem;
+        background-color: $color-grey;
+        border-radius: 100px;
     }
 
-    .player-active{
+    &__name{
+        display: block;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        @include openSansSemiBold;
+        font-size: 1.4rem;
+        color: $color-primary-light;
+        text-transform: uppercase;
+    }
+
+    &__position{
+        display: block;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-family: $font-primary;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    &__description{
+        display: none;
+        @include paragraph;
+    }
+
+    &--active{
         position: relative;
 
         &::before{
@@ -70,7 +72,7 @@
             height: 6rem;
         }
 
-        .single-player{
+        .team-member{
             &__image{
                 display: inline-block;
                 vertical-align: top;
@@ -81,33 +83,34 @@
                 border-radius: 60px;
             }
 
-            &__text{
+            &__name{
+                text-align: left;
+                display: inline;
+                line-height: 2.5rem;
                 position: absolute;
                 top: 6.5rem;
-                left: 0;
+                left: 2.5rem;
                 writing-mode: vertical-rl;
                 margin: .25rem;
             }
-        }
-
-        
-        .signature{
-            &-first{
+    
+            &__position{
                 text-align: left;
+                display: inline;
+                line-height: 2.5rem;
+                position: absolute;
+                top: 6.5rem;
+                left: .5rem;
+                writing-mode: vertical-rl;
+                margin: .25rem;
+            }
+    
+            &__description{
+                display: inline-block;
+                width: 71%;
+                margin: .75rem .75rem .75rem 2rem;
                 line-height: 2.5rem;
             }
-
-            &-second{
-                text-align: left;
-                line-height: 2.5rem;
-            }
-        }
-
-        .paragraph{
-            display: inline-block;
-            width: 71%;
-            margin: .75rem .75rem .75rem 2rem;
-            line-height: 2.5rem;
         }
     }
 }

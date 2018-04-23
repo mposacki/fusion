@@ -1,77 +1,89 @@
-.services-box{
+.active-site{
+    display:block;
+    //animation: moveInLeft 1s ease-in;
+}
+.service-item{
+    display:none;
+    //animation: moveInLeft 1s ease-in;
+}
+.services{
+    width: 101rem;
+    margin: 0 auto;
     padding-bottom: 14rem;
 
-    &__icon{
-        height: 100%;
-        width: auto;
-        display: block;
-        padding-bottom: 3.5rem;
-    }
+    &-box{
+        display: inline-block;
+        width: 33.333%;
 
-    &__title{
-        padding-bottom: 2rem;
-        font-family: $default-font;
-        font-size: 3rem;
-        font-weight: 300;
-    }
-
-    &__text{
-        width: 75%;
-        padding-bottom: 3rem;
-        color: $font-color-grey;
-        line-height: 2rem;
-        font-family: $font-primary;
-    }
-
-    paragraph{
-        width: 70%;
-        padding-bottom: 3.5rem;
+        &__icon{
+            padding-bottom: 3.5rem;
+        }
+    
+        &__title{
+            padding-bottom: 2rem;
+            font-family: $default-font;
+            font-size: 3rem;
+            font-weight: 300;
+        }
+    
+        &__text{
+            width: 75%;
+            padding-bottom: 3rem;
+            color: $font-color-grey;
+            line-height: 2rem;
+            font-family: $font-primary;
+        }
     }
 }
 
-.service-item{
+.image-box{
+    position: relative;
+    margin: 1.25rem 0;
 
-    .left-side{
-        position: relative;
+    &__title{
+        position: absolute;
+        top: 15rem;
+        right: -1.4rem;
+        color: $color-black;
+        background-color: $color-white;
+        padding: 1rem 3.5rem;
+        font-size: 3rem;
+    }
     
-        &__img-title{
-            position: absolute;
-            top: 15rem;
-            right: -1.4rem;
-            color: $color-black;
-            background-color: $color-white;
-            padding: 1rem 3.5rem;
-            font-size: 3rem;
-        }
+    &__arrow{
+        z-index: 200;
+        position: absolute;
+        bottom: 3rem;
+        left: 2rem;
+        line-height: 0;
         
-        &__arrow{
-            z-index: 200;
-            position: absolute;
-            bottom: 2rem;
-            left: 2rem;
+        &:hover{
+            animation: moveInRight .5s linear;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+.description-box{
+    position: relative;
+
+    &__heading-title{
+        @include openSansSemiBold;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+
+        &:before{
+            display: block;
+            content: "";
+            height: 12.6rem;
+            background-color: $color-primary-light;
+            width: 3px;
+            margin-bottom: 2rem;
         }
     }
 
-    .right-side{
-        position: relative;
-
-        &__heading-title{
-            @include openSansSemiBold;
-            font-size: 1.7rem;
-            text-transform: uppercase;
-
-            &:before{
-                display: block;
-                content: "";
-                height: 12.6rem;
-                background-color: $color-primary-light;
-                width: 3px;
-                margin-bottom: 2rem;
-            }
-        }
-
-        .paragraph{
-            margin-top: 3.5rem;
-        }
+    &__paragraph{
+        @include paragraph;
+        margin-top: 3.5rem;
     }
 }

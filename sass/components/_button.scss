@@ -18,14 +18,13 @@
         padding: 3px;
         font-size: 1.4rem;
         font-weight: 100;
-        transition: all .2s;
         @include openSansSemiBold;
     }
 
     &:hover{
         background-color: transparent;
-        color: $color-white;
-        transform: translateY(-2px);
+        color: $color-primary;
+        transition: color .5s ease-in-out;
     }
 
     &:active{
@@ -46,14 +45,13 @@
             padding: 3px;
             font-size: 1.4rem;
             font-weight: 100;
-            transition: all .2s;
             @include openSansSemiBold;
         }
 
         &:hover{
             background-color: transparent;
-            color: $color-white;
-            transform: translateY(-2px);
+            color: $color-primary;
+            transition: color .5s ease-in-out;
         }
 
         &:active{
@@ -76,7 +74,7 @@
 
 .btn-arrow{
     color: $color-primary;
-    font-size: 2rem;
+    font-size: 3rem;
     position: absolute;
     top: 80%;
     left: 50%;
@@ -88,13 +86,21 @@
 }
 
 .btn-orange{
-    &:link,
-    &:visited{
+    &, &:link, &:visited{
         font-size: 1.7rem;
         color: $color-black;
+        border: none;
         text-transform: uppercase;
-        background-color: $color-primary-light;
+        background-color: $color-primary;
         padding: 1.5rem 4rem;
-        @include openSansSemiBold;
-    }  
+        @include openSansSemiBold; 
+    }    
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        background-color: lighten($color-primary-light, 5%);
+        cursor: pointer;
+        transition: background .4s linear;
+    }
 }

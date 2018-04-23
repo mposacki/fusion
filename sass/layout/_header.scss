@@ -1,13 +1,15 @@
 .header{
     width: 100%;
-    position: fixed;
-    display: none;
+    position: absolute;
     bottom: 4%;
-    left: 0;
+    height: 65px;
     z-index: 100;
     
     &__logo-box{
-        float: left;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
         color: $color-primary;
         line-height: 0;
     }
@@ -17,7 +19,10 @@
     }
 
     &__btn-box{
-        float: right;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
         @include robotoMedium;
         font-size: 1.4rem;
     }

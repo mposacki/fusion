@@ -37,4 +37,11 @@
             }
         }
     }
+
+    &__arrow{
+        &:hover{
+            animation: moveInBottom .5s linear;
+            animation-iteration-count: infinite;
+        }
+    }
 }

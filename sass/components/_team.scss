@@ -68,6 +68,8 @@
             content: '';
             position: absolute;
             top: 0;
+            left: 1px;
+            z-index: 2;
             border-left: 2px solid $color-primary;
             height: 6rem;
         }

@@ -135,7 +135,7 @@ body {
 
 .btn-text:link, .btn-text:visited {
   color: #fff;
-  display: block;
+  display: inline;
   text-decoration: none;
   text-transform: uppercase;
   padding: 3px;
@@ -379,8 +379,12 @@ body {
 
 .owl-dots {
   text-align: right;
-  width: 100%;
-  margin-top: 4.5rem; }
+  width: auto;
+  margin-top: 4.5rem;
+  margin-left: auto; }
+
+.section-portfolio .owl-dots {
+  width: 20%; }
 
 .owl-dot {
   height: .5rem;
@@ -655,6 +659,8 @@ body {
       content: '';
       position: absolute;
       top: 0;
+      left: 1px;
+      z-index: 2;
       border-left: 2px solid #f7ac53;
       height: 6rem; }
     .team-member--active .team-member__image {

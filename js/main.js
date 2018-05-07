@@ -1,3 +1,5 @@
+/* Items */ 
+
 var burger = document.getElementById("burger");
 
 var activeService = document.getElementsByClassName("image-box__arrow")[0];
@@ -16,9 +18,28 @@ var projectDetails = [].slice.call(document.querySelectorAll("a[href='#project-d
 var projectSlides = [].slice.call(document.querySelectorAll("a[href='#project-slides']"));
 var projectActive = [].slice.call(document.querySelectorAll("a[href='#project-active']"));
 
+/* Menu burger*/
+
 burger.addEventListener('click', function () {
     this.parentElement.classList.toggle('active-menu');
 }, false);
+
+/* Active items in menu */
+
+$('.navigation__link').on('click', function() {
+
+    var item = $(this).attr('href'),
+        iditem = item.substring(1, item.length);
+        scrollPoint = $('section[id="' + iditem + '"]').offset().top+2;
+
+    $('body,html').animate({
+        scrollTop: scrollPoint
+    }, 1200);
+
+    return false;
+})
+
+/* Portfolio blocks animation */
 
 activeService.addEventListener('click', function (e) {
     serviceItemBox.style.display = 'block';
@@ -35,33 +56,6 @@ serviceItem.forEach(function (element, index) {
         e.preventDefault();
     });
 });
-
-var $members = $(".team-member").hover(function(e){
-        $(this).addClass('team-member--active');
-        $(this).css('animation', 'moveInLeft 1s ease-in');
-    }, function(){
-        $(this).removeClass('team-member--active');
-        $(this).css('animation', '');
-    });
-    // element.hover(function(){
-    //     this.classList.add('team-member--active');
-    //     this.style.animation = 'moveInLeft 1s ease-in';
-    // });
-//     element.addEventListener("mouseover", function () {
-//          this.classList.add('team-member--active');
-//          this.style.animation = 'moveInLeft 1s ease-in';
-//     });
-//     element.addEventListener("mouseout", function () {
-//         this.classList.remove('team-member--active');
-//         this.style.animation = null;
-//    });
-
-
-    // element.hover(
-    //     function() {this.classList.toggle('team-member--active') },
-    //     function() {this.style.animation = 'moveInLeft 2s ease-in'}
-    // );
-// });
 
 projectDetails.forEach(function (element, index) {
     element.addEventListener("click", function (e) {
@@ -96,3 +90,4 @@ projectActive.forEach(function (element, index) {
         e.preventDefault();
     });
 });
+

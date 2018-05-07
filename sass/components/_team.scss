@@ -1,118 +1,121 @@
 .team-members{
-    &::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border: 2px solid $color-black-2;
-        z-index: 1;
-    }
+    outline: 1px solid $color-black-2;    
 }
-
 .team-member{
     width: 25%;
     display: inline-block;
     min-height: 32rem;
     vertical-align: bottom;
-    border: 1px solid $color-black-1;
+    outline: 1px solid $color-black-1;
+    position: relative;
+
+    &::before{
+        display: block;
+        content: '';
+        border: 1px solid $color-black-1;
+        width: 0;
+        z-index: 2;
+        transition: border .5s linear, width .5s linear;
+    }
+
+    &::after{
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border-left: 2px solid $color-black-1;
+        height: 0;
+        transition: border .5s linear, height .5s linear;
+    }
+
+    &__content-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .5s ease;           
+    }
 
     &__image{
-        display: block;
-        margin: 5rem auto 2.5rem;
-        width: 12rem;
-        height: 12rem;
-        background-color: $color-grey;
-        border-radius: 100px;
+        width: 12.5rem;
+        height: auto;
+        border-radius: 50%;
+        transition: .5s linear;
     }
 
     &__name{
         display: block;
         text-align: center;
-        padding: 0;
-        margin: 0;
         @include openSansSemiBold;
-        font-size: 1.4rem;
+        font-size: 1.35rem;
         color: $color-primary-light;
         text-transform: uppercase;
+        transition: .5s linear;
     }
 
     &__position{
         display: block;
         text-align: center;
-        padding: 0;
-        margin: 0;
         font-family: $font-primary;
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         font-weight: bold;
+        transition: .5s linear;        
     }
 
     &__description{
-        display: none;
+        width: 70%;
+        margin: .75rem .75rem .75rem auto;
+        line-height: 2.5rem;
+        opacity: 0;
+        transition: .5s linear;
         @include paragraph;
     }
 
-    &--active{
+    &:hover{
         position: relative;
 
         &::before{
-            display: block;
-            content: '';
-            border: 1px solid $color-primary;
             width: 6rem;
+            border-color: $color-primary;
+            transition: border .5s linear, width .5s linear;
         }
 
         &::after{
-            display: block;
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 1px;
-            z-index: 2;
-            border-left: 2px solid $color-primary;
             height: 6rem;
+            border-color: $color-primary;
+            transition: border .5s linear, height .5s linear;            
         }
 
-        .team-member{
-            &__image{
-                display: inline-block;
-                vertical-align: top;
-                margin: 1rem 0 1.5rem 1rem;
-                width: 4rem;
-                height: 4rem;
-                background-color: $color-grey;
-                border-radius: 60px;
+        & .team-member{
+            &__content-box{
+                top: 0;
+                left: 0;
+                transform: translate(0, 0);
+                transition: .5s ease;
             }
 
+            &__image{
+                margin: 1rem 0 0 1rem;
+                width: 4rem; 
+                transition: .5s;        
+            }
+    
             &__name{
-                text-align: left;
-                display: inline;
-                line-height: 2.5rem;
-                position: absolute;
-                top: 6.5rem;
-                left: 2.5rem;
-                writing-mode: vertical-rl;
-                margin: .25rem;
+                transform: rotate(90deg) translate(6.3rem, 2.25rem);
             }
     
             &__position{
-                text-align: left;
-                display: inline;
-                line-height: 2.5rem;
-                position: absolute;
-                top: 6.5rem;
-                left: .5rem;
-                writing-mode: vertical-rl;
-                margin: .25rem;
+                transform: rotate(90deg) translate(2.4rem, 4.5rem);
             }
     
             &__description{
-                display: inline-block;
-                width: 71%;
-                margin: .75rem .75rem .75rem 2rem;
-                line-height: 2.5rem;
+                opacity: 1;
+                transition: .5s linear;
+                transition-delay: .6s;
             }
         }
+        
     }
 }

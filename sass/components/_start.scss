@@ -39,9 +39,11 @@
     }
 
     &__arrow{
+        animation: moveInBottom .6s linear;
+        animation-iteration-count: infinite;
+
         &:hover{
-            animation: moveInBottom .5s linear;
-            animation-iteration-count: infinite;
+            animation-play-state: paused;
         }
     }
 }

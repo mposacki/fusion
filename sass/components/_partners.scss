@@ -9,10 +9,5 @@
         &:not(:last-child){
             margin-right: 7.5rem;
         }
-
-        &:last-child{
-            -webkit-filter: contrast(0%);
-            filter: contrast(0%);
-        }
     }
 }

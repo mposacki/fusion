@@ -1,6 +1,9 @@
 .owl-carousel{
     height: 100% !important;
     margin-bottom: 3.75rem;
+    @include respond(md){
+        margin-bottom: 2.25rem;           
+    }
 }
 .owl-stage-outer{
     height: 100%;
@@ -48,9 +51,15 @@
     width: auto;
     margin-top: 4.5rem;
     margin-left: auto;
+    @include respond(md){
+        margin-top: 2.5rem;
+    }
 }
 .section-portfolio .owl-dots{
     width: 20%;
+    @include respond(md){
+        width: 50%;                   
+    }
 }
   .owl-dot {
     height: .5rem;
@@ -71,5 +80,8 @@
           margin:0 1.25rem;
           width: 3rem;
           margin-left: 3rem;
+          @include respond(md){
+            margin: 0 1rem;
+        }
       }
   }

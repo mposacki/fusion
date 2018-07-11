@@ -1,7 +1,16 @@
 .contact-data{
     width: 75rem;
     margin: 0 auto;
+    @include respond(md){
+        width: 90%;
+        text-align: center;
+    }
 
+    &__logo-box{
+        @include respond(md){
+            display: none;
+        }
+    }
     &__logo{
         display: inline-block;
         vertical-align: top;
@@ -16,12 +25,28 @@
 
     &__office{
         display: inline-block;
+        @include respond(md){
+            width: 33%;
+        }
 
-        &--ca{margin: 0 5rem;}
-        &--ny{margin: 0 3rem;}
+        &--ca{
+            margin: 0 5rem;
+            @include respond(md){
+                margin: 0;
+            }
+        }
+        &--ny{
+            margin: 0 3rem;
+            @include respond(md){
+                margin: 0;
+            }
+        }
         &--other{
             vertical-align: top;
             margin-left: 4rem;
+            @include respond(md){
+                margin: 0;
+            }
         }
     }
 

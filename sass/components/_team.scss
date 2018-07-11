@@ -8,6 +8,12 @@
     vertical-align: bottom;
     outline: 1px solid $color-black-1;
     position: relative;
+    @include respond(lg){
+        min-height: 28rem;
+    }
+    @include respond(md){
+        min-height: 27rem;
+    }
 
     &::before{
         display: block;
@@ -71,6 +77,16 @@
         opacity: 0;
         transition: .5s linear;
         @include paragraph;
+        @include respond(lg){
+            line-height: 2rem;
+            font-size: 1.3rem;
+        }
+        @include respond(md){
+            line-height: 1.65rem;
+            font-size: 1.3rem;
+            margin: 5rem .75rem 0;
+            width: auto;
+        }
     }
 
     &:hover{
@@ -80,12 +96,18 @@
             width: 6rem;
             border-color: $color-primary;
             transition: border .5s linear, width .5s linear;
+            @include respond(md){
+                width: 5rem;
+            }
         }
 
         &::after{
             height: 6rem;
             border-color: $color-primary;
-            transition: border .5s linear, height .5s linear;            
+            transition: border .5s linear, height .5s linear;     
+            @include respond(md){
+                height: 5rem;
+            }       
         }
 
         & .team-member{
@@ -99,15 +121,28 @@
             &__image{
                 margin: 1rem 0 0 1rem;
                 width: 4rem; 
-                transition: .5s;        
+                transition: .5s; 
+                @include respond(md){
+                    margin: .75rem 0 0 .75rem;
+                }       
             }
     
             &__name{
                 transform: rotate(90deg) translate(6.3rem, 2.25rem);
+                @include respond(md){
+                    transform: translate(5.3rem, -4rem);
+                    font-size: 1.2rem;
+                    line-height: 1.45rem;
+                }
             }
     
             &__position{
                 transform: rotate(90deg) translate(2.4rem, 4.5rem);
+                @include respond(md){
+                    transform: translate(4rem, -4rem);
+                    font-size: 1.15rem;
+                    line-height: 1.35rem;
+                }
             }
     
             &__description{

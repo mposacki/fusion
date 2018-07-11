@@ -3,6 +3,10 @@
     margin: 0 auto;
     height: 100%;
     position: relative;
+
+    @include respond(lg){
+        max-width: 90%;
+    }
     
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
@@ -11,19 +15,28 @@
             margin-bottom: $gutter-vertical-small;
         }
     }
-    
-    @include respond(tab-port){
-        max-width: 50rem;
-        padding: 0 3rem;
-    }
+   
 
     @include clearfix;
 
     [class^="col-"]{
         float: left;
+        position: relative;
+        
+        @include respond(lg){
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
 
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+            @include respond(lg){
+                margin-right: 5.5rem;
+            }
+            @include respond(md){
+                margin-right: 5rem;
+            }
             
             @include respond(tab-port){
                 margin-right: 0;

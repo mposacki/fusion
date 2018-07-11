@@ -19,6 +19,17 @@
         font-size: 1.4rem;
         font-weight: 100;
         @include openSansSemiBold;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+        @include respond(md){
+            font-size: 1.25rem;
+        }
+        @include respond(sm){
+            font-size: 1.2rem;
+        }
+        @include respond(sm){
+            font-size: 1.15rem;
+        }
     }
 
     &:hover{
@@ -45,6 +56,7 @@
             padding: 3px;
             font-size: 1.4rem;
             font-weight: 100;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
             @include openSansSemiBold;
         }
 
@@ -64,6 +76,13 @@
             background-color: $color-primary-light;
             width: 3px;
             margin: 2.5rem 0 0 0;
+            @include respond(lg){
+                height: 9.3rem;
+                margin: 2.5rem 0 0 auto;
+            } 
+            @include respond(md){
+                display: none;            
+            }
         }
 
         span{
@@ -72,13 +91,21 @@
     }
 }
 
-.btn-arrow{
+.btn.btn-arrow{
     color: $color-primary;
     font-size: 3rem;
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
+
+    @include respond(lg){
+        top: 75%;
+    }
+
+    @include respond(md){
+        display: none;
+    }
 
     &:hover{
         transform: translate(-50%, -50%) rotate(90deg);
@@ -94,6 +121,10 @@
         background-color: $color-primary;
         padding: 1.5rem 4rem;
         @include openSansSemiBold; 
+        @include respond(md){
+            font-size: 1.5rem;
+            padding: 1rem 3rem;
+        }
     }    
     &:focus{
         outline: none;

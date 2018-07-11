@@ -1,16 +1,32 @@
 .profil-list{
 
     margin: 1.5rem 0 9rem;
+    @include respond(lg){
+        margin: 1.5rem 0 5rem;
+    }
+    @include respond(md){
+        margin: 1rem 0 2.75rem;              
+    }
 
     &-box{
         display: inline-block;
         width: 49%;
         margin-top: 3.5rem;
+        @include respond(lg){
+            margin-top: 2.5rem;
+        }
+        @include respond(md){
+            width: 100%;
+            margin-top: 1rem;
+        }
 
         &__icon{
             display: inline-block;
             height: 1.6rem;
             margin-right: 1rem;
+            @include respond(lg){
+                margin-right: .75rem;
+            }
         }
 
         &__text{
@@ -18,6 +34,9 @@
             font-size: 1.5rem;
             @include openSansSemiBold;
             vertical-align: bottom;
+            @include respond(lg){
+                font-size: 1.4rem;
+            }
         }
     }
 }

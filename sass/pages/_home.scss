@@ -15,19 +15,43 @@
 .section-portfolio{
     background-color: $color-black;
     min-height: 95.3rem;
+    @include respond(lg){
+        min-height: 66.3rem;
+    }   
+    @include respond(md){
+        min-height: 60.3rem;
+    } 
 }
 
 .section-testimonials{
     background-color: $color-black-1;
     min-height: 112.5rem;
+    @include respond(lg){
+        min-height: 96.5rem;
+    } 
+    @include respond(md){
+        min-height: 79.5rem;
+    }
 }
 
 .section-team{
     background-color: $color-black-2;
     min-height: 110rem;
+    @include respond(lg){
+        min-height: 92rem;
+    }
+    @include respond(md){
+        min-height: 81rem;
+    }
 }
 
 .section-contact{
     background-color: $bg-color;
     min-height: 115.3rem;
+    @include respond(lg){
+        min-height: 90.3rem;
+    }
+    @include respond(md){
+        min-height: 73.3rem;
+    }
 }

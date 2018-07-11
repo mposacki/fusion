@@ -3,11 +3,24 @@
     margin: 0 auto 12rem;
     background-color: $color-black-2;
     box-shadow: 3px 3px 5px rgba($color-black, 0.3);
+    @include respond(lg){
+        margin: 0 auto 6rem;
+    }
+    @include respond(md){
+        width: 70rem;
+        margin: 0 auto 3rem;
+    }
 }
 
 .form{
     padding: 5.5rem 0;
     text-align: center;
+    @include respond(lg){
+        padding: 2.5rem 0;
+    }
+    @include respond(md){
+        padding: 1.5rem 0;
+    }
 
     &__group{
         position: relative;
@@ -24,6 +37,9 @@
             display: block;
             margin: 3rem auto 3rem;
             position: relative;
+            @include respond(lg){
+                margin: 1rem auto 3rem;
+            }
     
             .form{
                 &__input{

@@ -4,15 +4,54 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 40%;
+
+    @include respond(lg){
+        left: 45%;
+        transform: translate(-40%, -50%);
+    }
+
+    @include respond(md){
+        left: 40%;
+        transform: translate(-33%, -50%);
+    }
+
+    @include respond(sm){
+        left: 35%;
+        transform: translate(-25.5%, -50%);
+    }
+
+    @include respond(xs){
+        left: 30%;
+        transform: translate(-20%, -50%);
+    }
 
     &__text{
         font-family: $default-font;
         font-weight: 300;
         font-size: 5.5rem;
-        padding: 5.5rem;
+        padding: 3.5rem;
         position: relative;
         border: 1px solid $color-white;
+        
+        @include respond(lg){
+            padding: 2.25rem;
+            font-size: 5rem;
+        }
+
+        @include respond(md){
+            padding: 1.85rem;
+            font-size: 4.5rem;
+        }
+
+        @include respond(sm){
+            padding: 1.35rem;
+            font-size: 4rem;
+        }
+
+        @include respond(xs){
+            padding: 1rem;
+            font-size: 3rem;
+        }
 
         span{
             color: $color-primary;
@@ -26,7 +65,26 @@
         list-style: none;
         font-family: $font-primary;
         font-size: 1.3rem;
+
+        @include respond(lg){
+            margin-top: 2rem;
+            font-size: 1.2rem;
+        }
         
+        @include respond(md){
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        @include respond(sm){
+            margin-top: 1.25rem;
+        }
+
+        @include respond(xs){
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
         li{
             display: inline;
             padding: 0 0 0 1rem;

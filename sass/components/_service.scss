@@ -8,6 +8,9 @@
     width: 101rem;
     margin: 0 auto;
     padding-bottom: 14rem;
+    @include respond(lg){
+        padding-bottom: 4.5rem;
+    }
 
     &-box{
         display: inline-block;
@@ -41,11 +44,22 @@
     &__title{
         position: absolute;
         top: 15rem;
-        right: -1.4rem;
+        right: 0;
         color: $color-black;
         background-color: $color-white;
         padding: 1rem 3.5rem;
         font-size: 3rem;
+        @include respond(md){
+            top: 12rem;
+            padding: 1rem 2.5rem;
+            font-size: 2.5rem;
+            line-height: 2.8rem;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: auto;
     }
     
     &__arrow{
@@ -69,6 +83,10 @@
         @include openSansSemiBold;
         font-size: 1.7rem;
         text-transform: uppercase;
+        @include respond(md){
+            font-size: 1.55rem;
+            line-height: 2rem;               
+        }
 
         &:before{
             display: block;
@@ -77,11 +95,25 @@
             background-color: $color-primary-light;
             width: 3px;
             margin-bottom: 2rem;
+            @include respond(lg){
+                height: 9.5rem;
+            }
+            @include respond(md){
+                height: 3.5rem;                
+            }
         }
     }
 
     &__paragraph{
         @include paragraph;
         margin-top: 3.5rem;
+        @include respond(lg){
+            margin-top: 2.5rem;
+        }
+        @include respond(md){
+            margin-top: 1.5rem;
+            line-height: 1.65rem;
+            font-size: 1.3rem               
+        }
     }
 }

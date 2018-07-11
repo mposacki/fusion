@@ -27,3 +27,11 @@
         font-size: 1.4rem;
     }
 }
+
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $color-black-2;
+}

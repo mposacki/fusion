@@ -18,6 +18,8 @@ var projectDetails = [].slice.call(document.querySelectorAll("a[href='#project-d
 var projectSlides = [].slice.call(document.querySelectorAll("a[href='#project-slides']"));
 var projectActive = [].slice.call(document.querySelectorAll("a[href='#project-active']"));
 
+var header = document.getElementById('naviBeam');
+var headerOffset = header.offsetTop;
 /* Menu burger*/
 
 burger.addEventListener('click', function () {
@@ -38,6 +40,17 @@ $('.navigation__link').on('click', function() {
 
     return false;
 })
+
+/* Fixed menu */
+window.onscroll = function(){scroller()};
+
+function scroller(){
+    if(window.pageYOffset >= headerOffset){
+        header.classList.add("sticky");
+    }else{
+        header.classList.remove("sticky");
+    }
+}
 
 /* Portfolio blocks animation */
 

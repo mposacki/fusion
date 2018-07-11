@@ -1,13 +1,29 @@
 .partners{
-    width: 100%;
     margin-bottom: 10rem;
+    @include respond(lg){
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+    @include respond(md){
+        margin-bottom: 2rem;
+    }
     
     &__item{
         -webkit-filter: grayscale(100%); 
         filter: grayscale(100%);
+        vertical-align: middle;
+        @include respond(md){
+            margin-bottom: 2rem;
+        }
 
         &:not(:last-child){
             margin-right: 7.5rem;
+            @include respond(lg){
+                margin-right: 2.5rem;
+            }
+            @include respond(md){
+                margin-right: 3.5rem;
+            }
         }
     }
 }

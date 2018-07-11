@@ -21,13 +21,25 @@ body{
             background-color: $color-primary-light;
             width: 2px;
             margin: 0 auto 2.7rem;
+            @include respond(lg){
+                height: 9.3rem;
+            }
+            @include respond(md){
+                height: 6.3rem;
+            }
         }
 
             &--left{
                 margin-bottom: 1rem;
+                @include respond(md){
+                    padding-top: 2.5rem;
+                }
 
                 &::before{
                     margin: 0 0 2.5rem 0;
+                    @include respond(md){
+                        display: none;
+                    }
                 } 
             }
         }
@@ -37,6 +49,13 @@ body{
         font-weight: 300;
         font-size: 4rem;
         padding: 4rem 15% 11.5rem; 
+        @include respond(lg){
+            padding: 3rem 5% 5.5rem;
+        }
+        @include respond(md){
+            padding: 2rem 5% 4.5rem;
+            font-size: 3rem;
+        }
 
         &--left{
             font-size: 5.5rem;
@@ -52,5 +71,14 @@ body{
         top: 15rem;
         left: 0;
         text-align: left;
+        @include respond(lg){
+            top: 7.5rem;
+        }
+        @include respond(md){
+            position: relative;    
+            top: unset;
+            left: unset;
+            text-align: center;           
+        }
     }
 }

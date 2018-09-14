@@ -25,6 +25,9 @@
                 height: 35rem;
                 margin: 2.5rem auto;           
             }
+            @include respond(sm){
+                width: 100%;
+            }
         }
     
         &__links{
@@ -47,21 +50,25 @@
 }
 
 // Project slides subsection //
-.project-slides{
+.project-slides {
     display: none;
     width: 95rem;
     height: 90rem;
     margin: 0 auto;
     padding: 15rem 0;
-    @include respond(lg){
+    @include respond(lg) {
         width: 80rem;
         height: 70rem;
         padding: 7.5rem 0 10rem;
-    } 
-    @include respond(md){
+    }
+    @include respond(md) {
         width: 60rem;
         height: 60rem;
-        padding: 12.5rem 0;                  
+        padding: 12.5rem 0;
+    }
+    @include respond(sm) {
+        width: 90%;
+        margin: 0 auto;
     }
 }
 

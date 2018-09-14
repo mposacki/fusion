@@ -7,6 +7,9 @@
     @include respond(md){
         margin: 1rem 0 2.75rem;              
     }
+    @include respond(sm){
+        text-align: left;
+    }
 
     &-box{
         display: inline-block;

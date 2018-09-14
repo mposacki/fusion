@@ -6,6 +6,12 @@
         width: 60rem;
         height: 28rem;
     }
+    @include respond(sm){
+        width: 90%;
+        margin: 0 auto;
+        min-height: 28rem;
+        height: unset;
+    }
 
     .single-feedback{
         background-color: $color-black-2;
@@ -36,10 +42,17 @@
                 font-size: 1.6rem;
                 line-height: 2.2rem;
             }
+            @include respond(xs){
+                padding: 0 1rem;
+                margin: 0 auto 3rem;
+            }
         }
 
         &__group{
             text-align: center;
+            @include respond(sm){
+                padding-bottom: 1rem;
+            }
 
             &::before{
                 display: block;

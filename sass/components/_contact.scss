@@ -4,6 +4,7 @@
     @include respond(md){
         width: 90%;
         text-align: center;
+        padding-bottom: 2rem;
     }
 
     &__logo-box{
@@ -28,11 +29,19 @@
         @include respond(md){
             width: 33%;
         }
+        @include respond(xs){
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
 
         &--ca{
             margin: 0 5rem;
             @include respond(md){
                 margin: 0;
+            }
+            @include respond(xs){
+                margin: 0 auto;
             }
         }
         &--ny{
@@ -40,12 +49,18 @@
             @include respond(md){
                 margin: 0;
             }
+            @include respond(xs){
+                margin: 0 auto;
+            }
         }
         &--other{
             vertical-align: top;
             margin-left: 4rem;
             @include respond(md){
                 margin: 0;
+            }
+            @include respond(xs){
+                margin: 0 auto;
             }
         }
     }

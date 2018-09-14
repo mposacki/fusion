@@ -1,9 +1,13 @@
 @import "abstract/mixins";
 @import "abstract/variables";
+@import "layout/grid";
 
 @import "base/animations";
 @import "base/base";
 @import "base/typography";
+
+@import "layout/navigation";
+@import "layout/header";
 
 @import "components/button";
 @import "components/contact";
@@ -16,9 +20,5 @@
 @import "components/service";
 @import "components/start";
 @import "components/team";
-
-@import "layout/grid";
-@import "layout/navigation";
-@import "layout/header";
 
 @import "pages/home";

@@ -26,9 +26,15 @@
 
 
 .active-menu{
-    top:82.5%;
-    display: block;  
-    
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include respond(sm){
+        width: 100%;
+        left: unset;
+        transform: none;
+    }
     .navigation{
         
         &__burger{
@@ -50,12 +56,19 @@
         &__nav{
             display: block;
             animation: moveInTop .5s ease-in;
+            @include respond(sm){
+                padding-top: 1rem;
+            }
         }
         &__list{
             display: flex;
             background: $color-black-2;
             color: $color-white;
             list-style-type: none;
+            @include respond(sm){
+                display: block;
+                text-align: center;
+            }
         }
         &__item{
             white-space: nowrap;            

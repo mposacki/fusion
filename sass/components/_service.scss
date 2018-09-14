@@ -1,9 +1,30 @@
 .active-site{
     display:block;
 }
-.service-item{
-    display:none;
+
+.service{
+    &-image{
+        width: calc(50% - 3rem);
+        margin-right: 6rem;
+        float: left;
+        @include respond(sm){
+            display: none;
+        }
+    }
+    &-description{
+        width: calc(50% - 3rem);
+        float: left;
+        @include respond(sm){
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &-item{
+        display:none;
+
+    }
 }
+
 .services{
     width: 101rem;
     margin: 0 auto;
@@ -15,6 +36,17 @@
     &-box{
         display: inline-block;
         width: 33.333%;
+        @include respond(sm){
+            display: block;
+            width: 50%;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+        @include respond(xs){
+            display: block;
+            width: 100%;
+            margin: 0 auto 3rem;
+        }
 
         &__icon{
             padding-bottom: 3.5rem;
@@ -33,6 +65,9 @@
             color: $font-color-grey;
             line-height: 2rem;
             font-family: $font-primary;
+            @include respond(sm){
+                width: 100%;
+            }
         }
     }
 }
@@ -73,6 +108,18 @@
             animation: moveInRight .5s linear;
             animation-iteration-count: infinite;
         }
+
+        &-on-mobile {
+            display: none;
+            @include respond(sm){
+                display: block;
+                margin: 3rem auto;
+            }
+            &:hover{
+                animation: moveInRight .5s linear;
+                animation-iteration-count: infinite;
+            }
+        }
     }
 }
 
@@ -101,6 +148,11 @@
             @include respond(md){
                 height: 3.5rem;                
             }
+            @include respond(sm){
+                height: 5.5rem;
+                margin-right: auto;
+                margin-left: auto;
+            }
         }
     }
 
@@ -114,6 +166,9 @@
             margin-top: 1.5rem;
             line-height: 1.65rem;
             font-size: 1.3rem               
+        }
+        @include respond(sm){
+            text-align: left;
         }
     }
 }

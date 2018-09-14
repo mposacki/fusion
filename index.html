@@ -6,16 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans:400,600|Roboto:400,500" rel="stylesheet">
-
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-    <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
-
     <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
-
 
     <title>Fusion</title>
 </head>
@@ -116,7 +111,7 @@
         </div>
         <div class="service-item" id="service-item">
             <div class="row">
-                <div class="col-1-of-2">
+                <div class="service-image">
                     <figure class="image-box">
                         <img src="img/service-item.png" alt="Strategy photo" class="image-box__img">
                         <figcaption class="image-box__title">Strategy.</figcaption>
@@ -125,7 +120,7 @@
                         <img src="img/arrow.png" alt="Arrow icon">
                     </a>
                 </div>
-                <div class="col-1-of-2">
+                <div class="service-description">
                     <div class="description-box">
                         <h2 class="description-box__heading-title">Perfect strategy for your brand</h2>
                         <p class="description-box__paragraph">Chances are unless you are very lucky you will go thru many different relationships before you find
@@ -153,6 +148,9 @@
                             </figure>
                         </div>
                         <a href="#section-contact" class="btn btn-orange">Get in touch &rarr;</a>
+                        <a href="#active-site" class="image-box__arrow-on-mobile">
+                            <img src="img/arrow.png" alt="Arrow icon">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -403,10 +401,10 @@
                     <input type="subject" class="form__input" id="subject" required>
                     <label for="subject" class="form__label">Subject</label>
                 </div><div class="form__group-big">
-                    <input type="message" class="form__input" id="message" required>
+                    <textarea type="message" class="form__input" id="message" required></textarea>
                     <label for="message" class="form__label">Your message</label>
                 </div>
-                <button type="submit" href="#" class="btn btn-orange">Get in touch &rarr;</button>
+                <button type="submit" href="#" class="btn btn-orange" id="submitButton">Get in touch &rarr;</button>
             </form>
         </div>
         <div class="contact-data">
@@ -450,6 +448,7 @@
     </section>
 
     <script src="/js/main.js"></script>
+    <script src="/js/skroll.js"></script>
     <script src="/owlcarousel/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -478,14 +477,6 @@
                 autoplayTimeout: 3000,
                 autoplayHoverPause: true
             });
-
-            // $(document.documentElement).keyup(function(event) {    
-            // if (event.keyCode == 37) { /*left key*/
-            // $("#project-slider").trigger('prev.owl.carousel', [700]);
-            // } else if (event.keyCode == 39) { /*right key*/
-            // $("#project-slider").trigger('next.owl.carousel', [700]);
-            // }
-            // });
         });
     </script>
 </body>

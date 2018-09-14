@@ -2,18 +2,18 @@
 
 var burger = document.getElementById("burger");
 
-var activeService = document.getElementsByClassName("image-box__arrow")[0];
+var activeService = [].slice.call(document.querySelectorAll("a[href='#active-site']"));
 var activeServiceBox = document.getElementById("service-item");
 
-var teamMembers = [].slice.call(document.getElementsByClassName("team-member"));
-
 var serviceItem = [].slice.call(document.getElementsByClassName("services-box__arrow"));
-var serviceItemBox = document.getElementById("active-site");
 
+var links = [].slice.call(document.querySelectorAll("a[href^='#section-']"));
+
+var serviceItemBox = document.getElementById("active-site");
 var projectDetailsBox = document.getElementById("project-details");
 var projectSlidesBox = document.getElementById("project-slides");
-var projectActiveBox = document.getElementById("project-active");
 
+var projectActiveBox = document.getElementById("project-active");
 var projectDetails = [].slice.call(document.querySelectorAll("a[href='#project-details']"));
 var projectSlides = [].slice.call(document.querySelectorAll("a[href='#project-slides']"));
 var projectActive = [].slice.call(document.querySelectorAll("a[href='#project-active']"));
@@ -27,19 +27,23 @@ burger.addEventListener('click', function () {
 }, false);
 
 /* Active items in menu */
+links.forEach(function (element, index) {
+    element.addEventListener("click", function (e) {
+        e.preventDefault();
+        var item = this.getAttribute('href'),
+            iditem = item.substring(1, item.length),
+            section = document.querySelector('section[id="' + iditem + '"]');
+        scrollPoint = section.offsetTop;
 
-$('.navigation__link').on('click', function() {
+        skrollTop.scrollTo({
+            to: scrollPoint,
+            duration: 1200
+        });
 
-    var item = $(this).attr('href'),
-        iditem = item.substring(1, item.length);
-        scrollPoint = $('section[id="' + iditem + '"]').offset().top+2;
+        return false;
+    });
+});
 
-    $('body,html').animate({
-        scrollTop: scrollPoint
-    }, 1200);
-
-    return false;
-})
 
 /* Fixed menu */
 window.onscroll = function(){scroller()};
@@ -53,13 +57,14 @@ function scroller(){
 }
 
 /* Portfolio blocks animation */
-
-activeService.addEventListener('click', function (e) {
-    serviceItemBox.style.display = 'block';
-    serviceItemBox.style.animation = 'moveInLeft 1s ease-in';
-    activeServiceBox.style.display = 'none';
-    e.preventDefault();
-}, false);
+activeService.forEach(function (element, index) {
+    element.addEventListener("click", function (e) {
+        serviceItemBox.style.display = 'block';
+        serviceItemBox.style.animation = 'moveInLeft 1s ease-in';
+        activeServiceBox.style.display = 'none';
+        e.preventDefault();
+    });
+});
 
 serviceItem.forEach(function (element, index) {
     element.addEventListener("click", function (e) {
@@ -103,4 +108,3 @@ projectActive.forEach(function (element, index) {
         e.preventDefault();
     });
 });
-

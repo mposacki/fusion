@@ -1,18 +1,26 @@
-.team-members{
-    outline: 1px solid $color-black-2;    
-}
+
 .team-member{
     width: 25%;
     display: inline-block;
     min-height: 32rem;
     vertical-align: bottom;
-    outline: 1px solid $color-black-1;
+    border: 1px solid $color-black-1;
     position: relative;
     @include respond(lg){
         min-height: 28rem;
     }
     @include respond(md){
         min-height: 27rem;
+    }
+    @include respond(sm){
+        width: 50%;
+        min-height: 23rem;
+    }
+    @include respond(xs){
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        min-height: 20rem;
     }
 
     &::before{
@@ -99,6 +107,9 @@
             @include respond(md){
                 width: 5rem;
             }
+            @include respond(sm){
+                width: 7rem;
+            }
         }
 
         &::after{
@@ -107,7 +118,10 @@
             transition: border .5s linear, height .5s linear;     
             @include respond(md){
                 height: 5rem;
-            }       
+            }
+            @include respond(sm){
+                height: 7rem;
+            }
         }
 
         & .team-member{
@@ -124,7 +138,10 @@
                 transition: .5s; 
                 @include respond(md){
                     margin: .75rem 0 0 .75rem;
-                }       
+                }
+                @include respond(sm){
+                    width: 6rem;
+                }
             }
     
             &__name{
@@ -133,6 +150,9 @@
                     transform: translate(5.3rem, -4rem);
                     font-size: 1.2rem;
                     line-height: 1.45rem;
+                }
+                @include respond(sm){
+                    transform: translate(9.3rem, -5rem);
                 }
             }
     
@@ -143,12 +163,18 @@
                     font-size: 1.15rem;
                     line-height: 1.35rem;
                 }
+                @include respond(sm){
+                    transform: translate(8rem, -4rem);
+                }
             }
     
             &__description{
                 opacity: 1;
                 transition: .5s linear;
                 transition-delay: .6s;
+                @include respond(sm){
+                    margin: 8rem .75rem 0;
+                }
             }
         }
         
